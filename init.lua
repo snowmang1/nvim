@@ -9,7 +9,7 @@ require("nvim-tree").setup()
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'material',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
@@ -20,7 +20,7 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_x = {'encoding', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
@@ -48,14 +48,24 @@ o.cursorline = true
 -- keymaps
 local map = vim.api.nvim_set_keymap
 	-- window nav
-map('n', '<c-h>', ':wincmd h<cr>', {silent = true, noremap = true}) 
-map('n', '<c-j>', ':wincmd j<cr>', {silent = true, noremap = true}) 
-map('n', '<c-k>', ':wincmd k<cr>', {silent = true, noremap = true}) 
-map('n', '<c-l>', ':wincmd l<cr>', {silent = true, noremap = true}) 
+map('n', '<c-h>', '<c-w>h', {silent = true, noremap = true}) 
+map('n', '<c-j>', '<c-w>j', {silent = true, noremap = true}) 
+map('n', '<c-k>', '<c-w>k', {silent = true, noremap = true}) 
+map('n', '<c-l>', '<c-w>l', {silent = true, noremap = true}) 
+map('t', '<c-h>', '<c-\\><c-n><c-w>h', {silent = true}) 
+map('t', '<c-j>', '<c-\\><c-n><c-w>j', {silent = true}) 
+map('t', '<c-k>', '<c-\\><c-n><c-w>k', {silent = true}) 
+map('t', '<c-l>', '<c-\\><c-n><c-w>l', {silent = true}) 
 
 	-- couple completion
 map('i', '(', '()<Left>', {silent = true})
 map('i', '[', '[]<Left>', {silent = true})
 map('i', '{', '{}<Left>', {silent = true})
+
+	-- terminal mappings
+map('t', '<esc>', '<c-\\><c-n>', {silent = true})
+
+	-- custom keymaps
+map('n', '<c-n>', ':NvimTreeToggle<CR>', {silent = true, noremap = true})
 
 map('i', '<C-d>', '<esc>yypA', {silent = true})
