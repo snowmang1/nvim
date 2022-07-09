@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'	-- Package Manager
   use 'neovim/nvim-lspconfig'	-- Configuration for Nvim LSP
+  use 'jvirtanen/vim-hcl'	-- hcl syntax highlighting
   use {				-- Treesitter model for syntax highlighting
 	'nvim-treesitter/nvim-treesitter',
 	run = ':TSUpdate'
