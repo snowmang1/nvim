@@ -5,6 +5,9 @@ require('plugins')
 -- nvim tree setup
 require'nvim-tree'.setup {}
 
+-- nvim leap
+require'leap'.set_default_keymaps()
+
 -- nvim treesitter config
 require'nvim-treesitter.configs'.setup {
 	-- a list of languages to include parsers for
