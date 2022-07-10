@@ -8,6 +8,7 @@
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'					-- Package Manager
+	use 'sumneko/lua-language-server'			-- lua lsp
 	use {																	-- hop
 		'phaazon/hop.nvim',
 		branch = 'v2', -- optional but strongly recommended
