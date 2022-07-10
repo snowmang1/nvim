@@ -9,22 +9,21 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'	-- Package Manager
   use 'neovim/nvim-lspconfig'	-- Configuration for Nvim LSP
-  use 'jvirtanen/vim-hcl'	-- hcl syntax highlighting
   use {				-- Treesitter model for syntax highlighting
-	'nvim-treesitter/nvim-treesitter',
-	run = ':TSUpdate'
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
 	}
   use {				-- Nvim Tree
-	'kyazdani42/nvim-tree.lua',
-	requires = {
-		'kyazdani42/nvim-web-devicons', -- optional, for file icons
+		'kyazdani42/nvim-tree.lua',
+		requires = {
+			'kyazdani42/nvim-web-devicons', -- optional, for file icons
 		},
-	tag = 'nightly' -- optional, updated every week. (see issue #1193)
+		tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
   use 'dense-analysis/ale'	-- ALE anylitics tool
   use {
-	'nvim-lualine/lualine.nvim',
-	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' } -- diffview.nvim
 

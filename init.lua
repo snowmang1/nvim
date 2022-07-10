@@ -2,7 +2,10 @@
 
 require('plugins')
 
--- this setup uses the defaults for tree config
+-- nvim tree setup
+require'nvim-tree'.setup {}
+
+-- nvim treesitter config
 require'nvim-treesitter.configs'.setup {
 	-- a list of languages to include parsers for
 	ensure_installed = {'c', 'lua', 'rust', 'bash', 'dockerfile', 'hcl', 'help', 'latex'},
@@ -32,6 +35,12 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
 		additional_vim_regex_highlighting = false,
 	}
+}
+
+-- lsp config
+require('lspconfig')['rust_analyzer'].setup{
+	on_attach = on_attach,
+	flags = lsp_flags
 }
 
 -- lua line config
@@ -77,10 +86,11 @@ o.cursorline = true
 -- keymaps
 local map = vim.api.nvim_set_keymap
 	-- window nav
-map('n', '<c-h>', '<c-w>h', {silent = true, noremap = true}) 
-map('n', '<c-j>', '<c-w>j', {silent = true, noremap = true}) 
-map('n', '<c-k>', '<c-w>k', {silent = true, noremap = true}) 
-map('n', '<c-l>', '<c-w>l', {silent = true, noremap = true}) 
+	local nore_opts = { noremap = true, silent = true }
+map('n', '<c-h>', '<c-w>h', nore_opts) 
+map('n', '<c-j>', '<c-w>j', nore_opts) 
+map('n', '<c-k>', '<c-w>k', nore_opts) 
+map('n', '<c-l>', '<c-w>l', nore_opts) 
 map('t', '<c-h>', '<c-\\><c-n><c-w>h', {silent = true}) 
 map('t', '<c-j>', '<c-\\><c-n><c-w>j', {silent = true}) 
 map('t', '<c-k>', '<c-\\><c-n><c-w>k', {silent = true}) 
@@ -95,6 +105,5 @@ map('i', '{', '{}<Left>', {silent = true})
 map('t', '<esc>', '<c-\\><c-n>', {silent = true})
 
 	-- custom keymaps
-map('n', '<c-n>', ':NvimTreeToggle<CR>', {silent = true, noremap = true})
-
+map('n', '<c-n>', ':NvimTreeToggle<CR>', nore_opts)
 map('i', '<C-d>', '<esc>yypA', {silent = true})
