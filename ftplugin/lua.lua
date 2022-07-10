@@ -6,6 +6,7 @@ bo.tabstop = 2
 bo.shiftwidth = 2
 
 require'lspconfig'.sumneko_lua.setup {
+	autostart = true,
   settings = {
     Lua = {
       runtime = {

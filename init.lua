@@ -25,7 +25,7 @@ require'nvim-treesitter.configs'.setup {
 	highlight = {
 		-- disable extension
 		enable = true,
-		
+
 		-- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
     -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
     -- the name of the parser)
@@ -71,6 +71,9 @@ require('lualine').setup {
   extensions = {}
 }
 
+-- custom filetype command
+vim.cmd [[ autocmd BufRead,BufNewFile *.org set filetype=org ]]
+
 -- options
 local o = vim.o		-- global
 local wo = vim.wo	-- window local
@@ -84,14 +87,14 @@ o.cursorline = true
 local map = vim.api.nvim_set_keymap
 	-- window nav
 	local nore_opts = { noremap = true, silent = true }
-map('n', '<c-h>', '<c-w>h', nore_opts) 
-map('n', '<c-j>', '<c-w>j', nore_opts) 
-map('n', '<c-k>', '<c-w>k', nore_opts) 
-map('n', '<c-l>', '<c-w>l', nore_opts) 
-map('t', '<c-h>', '<c-\\><c-n><c-w>h', {silent = true}) 
-map('t', '<c-j>', '<c-\\><c-n><c-w>j', {silent = true}) 
-map('t', '<c-k>', '<c-\\><c-n><c-w>k', {silent = true}) 
-map('t', '<c-l>', '<c-\\><c-n><c-w>l', {silent = true}) 
+map('n', '<c-h>', '<c-w>h', nore_opts)
+map('n', '<c-j>', '<c-w>j', nore_opts)
+map('n', '<c-k>', '<c-w>k', nore_opts)
+map('n', '<c-l>', '<c-w>l', nore_opts)
+map('t', '<c-h>', '<c-\\><c-n><c-w>h', {silent = true})
+map('t', '<c-j>', '<c-\\><c-n><c-w>j', {silent = true})
+map('t', '<c-k>', '<c-\\><c-n><c-w>k', {silent = true})
+map('t', '<c-l>', '<c-\\><c-n><c-w>l', {silent = true})
 
 	-- couple completion
 map('i', '(', '()<Left>', {silent = true})
