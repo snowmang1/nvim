@@ -7,20 +7,28 @@
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'	-- Package Manager
-  use 'neovim/nvim-lspconfig'	-- Configuration for Nvim LSP
-  use {				-- Treesitter model for syntax highlighting
+  use 'wbthomason/packer.nvim'					-- Package Manager
+	use {																	-- hop
+		'phaazon/hop.nvim',
+		branch = 'v2', -- optional but strongly recommended
+		config = function()
+		-- you can configure Hop the way you like here; see :h hop-config
+		require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  end
+	}
+  use 'neovim/nvim-lspconfig'						-- Configuration for Nvim LSP
+  use {																	-- Treesitter model for syntax highlighting
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
-  use {				-- Nvim Tree
+  use {																	-- Nvim Tree
 		'kyazdani42/nvim-tree.lua',
 		requires = {
-			'kyazdani42/nvim-web-devicons', -- optional, for file icons
+			'kyazdani42/nvim-web-devicons',	-- optional, for file icons
 		},
-		tag = 'nightly' -- optional, updated every week. (see issue #1193)
+		tag = 'nightly'	-- optional, updated every week. (see issue #1193)
 	}
-  use 'dense-analysis/ale'	-- ALE anylitics tool
+  use 'dense-analysis/ale'							-- ALE anylitics tool
   use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
