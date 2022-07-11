@@ -107,4 +107,4 @@ map('t', '<esc>', '<c-\\><c-n>', {silent = true})
 	-- custom keymaps
 map('n', '<c-n>', ':NvimTreeToggle<CR>', nore_opts)
 map('i', '<C-d>', '<esc>yypA', {silent = true})
-map('n', '<C-h>', ':HopWord<CR>', nore_opts)
+map('n', '<C-p>', ':HopWord<CR>', nore_opts)
