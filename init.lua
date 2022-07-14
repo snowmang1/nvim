@@ -11,7 +11,7 @@ vim.cmd [[ autocmd BufRead,BufNewFile *.org set filetype=org ]]
 -- options
 local o = vim.o		-- global
 local wo = vim.wo	-- window local
-local bo = vim.bo	-- buffer local
+-- local bo = vim.bo	-- buffer local
 
 -- window local
 wo.number = true
@@ -42,4 +42,3 @@ map('t', '<esc>', '<c-\\><c-n>', {silent = true})
 map('n', '<c-n>', ':NvimTreeToggle<CR>', nore_opts)
 map('i', '<C-d>', '<esc>yypA', {silent = true})
 map('n', '<C-p>', ':HopWord<CR>', nore_opts)
-
