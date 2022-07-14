@@ -1,3 +1,4 @@
+-- Evan Drake neovim config
 
 -- required files
 require('plugins')
