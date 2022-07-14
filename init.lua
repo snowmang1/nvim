@@ -108,3 +108,24 @@ map('t', '<esc>', '<c-\\><c-n>', {silent = true})
 map('n', '<c-n>', ':NvimTreeToggle<CR>', nore_opts)
 map('i', '<C-d>', '<esc>yypA', {silent = true})
 map('n', '<C-p>', ':HopWord<CR>', nore_opts)
+
+-- terminal confg
+function TerminalSettings()
+	local wo = vim.wo	-- window local
+	wo.number = false
+	wo.cursorline = false
+end
+
+vim.cmd [[
+	augroup TerminalSettings
+		autocmd!
+		autocmd TermOpen * TerminalSettings()
+	augroup end
+]]
+
+local termGrp = vim.api.nvim_create_augroup("TerminalSettings", {clear = true})
+vim.api.nvim_create_autocmd("TermOpen", {
+	command = "silent! lua TerminalSettings()",
+	group = termGrp,
+})
+
