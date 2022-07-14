@@ -1,4 +1,3 @@
-local wo = vim.wo
 local bo = vim.bo
 
 bo.expandtab = false
@@ -10,7 +9,7 @@ require'lspconfig'.sumneko_lua.setup {
   settings = {
     Lua = {
       runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        -- Tell the language server which version of Lua you're using
         version = 'LuaJIT',
       },
       diagnostics = {
