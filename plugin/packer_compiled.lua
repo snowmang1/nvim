@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/evandrake/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/evandrake/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/evandrake/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/evandrake/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/evandrake/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/evandliatrio/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/evandliatrio/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/evandliatrio/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/evandliatrio/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/evandliatrio/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,53 +71,53 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ale = {
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/ale",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/ale",
     url = "https://github.com/dense-analysis/ale"
   },
   ["diffview.nvim"] = {
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
   ["hop.nvim"] = {
     config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0" },
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/evandrake/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   }
 }

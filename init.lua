@@ -2,6 +2,8 @@
 
 -- required files
 require('plugins')
+
+-- for some reason it is not detecting this plugin_config file and preloading it
 require('plugin_config')
 require('autocmds')
 
