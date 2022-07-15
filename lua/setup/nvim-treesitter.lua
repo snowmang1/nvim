@@ -1,11 +1,3 @@
--- file for setting up plugins
-
--- nvim tree setup
-require'nvim-tree'.setup {}
-
--- hop setup
-require'hop'.setup()
-
 -- nvim treesitter config
 require'nvim-treesitter.configs'.setup {
 	-- a list of languages to include parsers for
@@ -36,35 +28,4 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
 		additional_vim_regex_highlighting = false,
 	}
-}
-
--- lua line config
-require('lualine').setup {
-  options = {
-    icons_enabled = true,
-    theme = 'material',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
-    disabled_filetypes = {},
-    always_divide_middle = true,
-    globalstatus = false,
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  extensions = {}
 }
