@@ -8,3 +8,5 @@ require('options')
 
 -- custom filetype command
 vim.cmd [[ autocmd BufRead,BufNewFile *.org set filetype=org ]]
+
+vim.cmd [[ colorscheme aurora ]]

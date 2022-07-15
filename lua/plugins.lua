@@ -12,6 +12,7 @@ end
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'					-- Package Manager
+	use 'ray-x/aurora'
 	use {																	-- hop
 		'phaazon/hop.nvim',
 		branch = 'v2', -- optional but strongly recommended
