@@ -11,17 +11,18 @@ end
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'					-- Package Manager
+	use 'wbthomason/packer.nvim'					-- Package Manager
+	use({
+    "kylechui/nvim-surround",
+		branch = 'main',
+    config = Get_setup('surround')
+	})
 	use {																	-- hop
 		'phaazon/hop.nvim',
 		branch = 'v2', -- optional but strongly recommended
-		config = function()
-			Get_setup('hop')
-			-- you can configure Hop the way you like here; see :h hop-config
-			require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-		end
+		config = Get_setup('hop')
 	}
-  use 'neovim/nvim-lspconfig'						-- Configuration for Nvim LSP
+  use 'neovim/nvim-lspconfig'						-- Configuration for Nvim LSP, config is in ftplugins
   use {																	-- Treesitter model for syntax highlighting
 		'nvim-treesitter/nvim-treesitter',
 		config = Get_setup("nvim-treesitter"),
@@ -35,14 +36,18 @@ return require('packer').startup(function(use)
 		tag = 'nightly',
 		config = Get_setup('nvim-tree')
 	}
-  use 'dense-analysis/ale'							-- ALE anylitics tool
   use {
 		'nvim-lualine/lualine.nvim',
 		config = Get_setup("lualine"),
 		event = "VimEnter",
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' } -- diffview.nvim
-
+  use { -- diffview.nvim
+		'sindrets/diffview.nvim',
+		config = Get_setup('diffview'),
+		requires = 'nvim-lua/plenary.nvim'
+	}
+	------------- colors
+	use 'ray-x/aurora'
 end)
 
