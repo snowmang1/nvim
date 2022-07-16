@@ -3,6 +3,8 @@
 - pure lua config (with external exceptions)
 - mappings with focus on 'pure vim' experience
 - options with focus twards programming
+- custom made lualine (starting from evil line WIP)
+![snowline](readme_data/lualine_minimal.png)
 ### Plugins
 - [lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [hop](https://github.com/phaazon/hop.nvim)
@@ -11,7 +13,6 @@
 - [ nvim-lsp ]( https://github.com/neovim/nvim-lspconfig )
 - [ nvim-treesitter ]( https://github.com/nvim-treesitter/nvim-treesitter )
 - [ nvim-tree ]( https://github.com/kyazdani42/nvim-tree.lua )
-- [ ale ]( https://github.com/dense-analysis/ale ) This is switched off for languages that have a lsp in ftplugin
 ## setup
 1. use the [quick start file](https://github.com/snowmang1/nvim/blob/2c3e351dc346cf31cf38f3b870452286f08ec9e5/.quick_start.sh) to initialize your repo when you first clone.
 	- or anytime I include a new lsp
