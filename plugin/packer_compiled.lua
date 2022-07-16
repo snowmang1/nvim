@@ -135,22 +135,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: diffview.nvim
-time([[Config for diffview.nvim]], true)
-require("setup/diffview")
-time([[Config for diffview.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("setup/nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
 -- Config for: hop.nvim
 time([[Config for hop.nvim]], true)
 require("setup/hop")
 time([[Config for hop.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("setup/nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
 require("setup/surround")
 time([[Config for nvim-surround]], false)
+-- Config for: diffview.nvim
+time([[Config for diffview.nvim]], true)
+require("setup/diffview")
+time([[Config for diffview.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("setup/nvim-tree")
