@@ -12,6 +12,10 @@ end
 return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'					-- Package Manager
+	use ({
+		'anuvyklack/hydra.nvim',						-- Hydra
+		config = Get_setup('hydra')
+	})
 	use({
     "kylechui/nvim-surround",
 		branch = 'main',
