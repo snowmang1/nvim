@@ -12,6 +12,11 @@ end
 return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'					-- Package Manager
+	use {
+    'goolord/alpha-nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    config = Get_setup('alpha')
+	}
 	use({
     "kylechui/nvim-surround",
 		branch = 'main',
@@ -25,7 +30,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'						-- Configuration for Nvim LSP, config is in ftplugins
   use {																	-- Treesitter model for syntax highlighting
 		'nvim-treesitter/nvim-treesitter',
-		config = Get_setup("nvim-treesitter"),
+		config = Get_setup('nvim-treesitter'),
 		run = ':TSUpdate'
 	}
   use {																	-- Nvim Tree
