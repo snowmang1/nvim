@@ -8,9 +8,15 @@ end
 
 -- Only required if you have packer configured as `opt`
 -- vim.cmd [[packadd packer.vim]]
-
 return require('packer').startup(function(use)
   -- Packer can manage itself
+	use ({
+		'p00f/nvim-ts-rainbow',
+		branch = 'master',
+		config = Get_setup('ts-rainbow')
+	})
+	use {'nvim-treesitter/nvim-treesitter-textobjects'}
+	use {'shaunsingh/oxocarbon.nvim', run = './install.sh'} -- oxocarbon color scheme
 	use 'wbthomason/packer.nvim'					-- Package Manager
 	use({
     "kylechui/nvim-surround",
