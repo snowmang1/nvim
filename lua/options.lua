@@ -6,3 +6,4 @@ local wo = vim.wo			-- window local
 -- window local
 wo.number = true
 o.cursorline = true
+o.signcolumn = 'number'
