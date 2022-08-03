@@ -27,3 +27,5 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
+
+vim.cmd [[ :LspStart ]]

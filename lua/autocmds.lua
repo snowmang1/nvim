@@ -1,5 +1,4 @@
-
--- terminal confg
+-- terminal config
 function TerminalSettings()
 	local wo = vim.wo	-- window local
 	wo.number = false
