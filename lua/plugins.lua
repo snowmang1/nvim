@@ -10,6 +10,11 @@ end
 -- vim.cmd [[packadd packer.vim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
+	use 'wbthomason/packer.nvim'					-- Package Manager
+	use({
+		"Pocco81/true-zen.nvim",
+		config = Get_setup('zen')
+	})
 	use ({
 		'p00f/nvim-ts-rainbow',
 		branch = 'master',
@@ -17,7 +22,6 @@ return require('packer').startup(function(use)
 	})
 	use {'nvim-treesitter/nvim-treesitter-textobjects'}
 	use {'shaunsingh/oxocarbon.nvim', run = './install.sh'} -- oxocarbon color scheme
-	use 'wbthomason/packer.nvim'					-- Package Manager
 	use {
     'goolord/alpha-nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
