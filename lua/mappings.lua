@@ -1,9 +1,11 @@
-
--- helper variables
+	-- helper variables
 local map = vim.api.nvim_set_keymap
 
+	-- map leader
+vim.g.mapleader = ';'
+
 	-- window nav
-	local nore_opts = { noremap = true, silent = true }
+local nore_opts = { noremap = true, silent = true }
 map('n', '<c-h>', '<c-w>h'						, nore_opts)
 map('n', '<c-j>', '<c-w>j'						, nore_opts)
 map('n', '<c-k>', '<c-w>k'						, nore_opts)
@@ -31,3 +33,10 @@ map('n', '<C-n>'		, ':NvimTreeToggle<CR>'	, nore_opts)
 map('i', '<C-d>'		, '<esc>yypA'						, {silent = true})
 map('n', '<C-p>'		, ':HopWord<CR>'				, nore_opts)
 map('n', '<space>h'	, ':noh<CR>'						, nore_opts)
+
+	-- zen mode
+map("n", "<leader>e", ":TZNarrow<CR>"			, {})
+map("v", "<leader>n", ":'<,'>TZNarrow<CR>", {})
+map("n", "<leader>f", ":TZFocus<CR>"			, {})
+map("n", "<leader>m", ":TZMinimalist<CR>"	, {})
+map("n", "<leader>n", ":TZAtaraxis<CR>"		, {})
