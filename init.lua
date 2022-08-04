@@ -11,5 +11,5 @@ vim.cmd [[ autocmd BufRead,BufNewFile *.org set filetype=org ]]
 
 vim.cmd.colorscheme "oxocarbon"
 vim.diagnostic.config({ virtual_text = false })
-vim.diagnostic.config({ virtual_lines = { only_current_line = true } })
+vim.diagnostic.config({ virtual_lines = true })
 vim.keymap.set("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
