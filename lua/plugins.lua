@@ -12,6 +12,10 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'					-- Package Manager
 	use({
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		config = Get_setup('lsp_lines')
+	})
+	use({
 		"Pocco81/true-zen.nvim",
 		config = Get_setup('zen')
 	})
