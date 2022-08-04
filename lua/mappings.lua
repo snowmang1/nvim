@@ -29,14 +29,19 @@ map('n', '<space>n', '<cmd>lua vim.diagnostic.goto_next()<CR>'	, nore_opts)
 map('n', '<space>p', '<cmd>lua vim.diagnostic.goto_prev()<CR>'	, nore_opts)
 
 	-- misc keymaps
-map('n', '<C-n>'		, ':NvimTreeToggle<CR>'	, nore_opts)
+map('n', '<C-n>'		, '<cmd>NvimTreeToggle<CR>'	, nore_opts)
 map('i', '<C-d>'		, '<esc>yypA'						, {silent = true})
-map('n', '<C-p>'		, ':HopWord<CR>'				, nore_opts)
-map('n', '<space>h'	, ':noh<CR>'						, nore_opts)
+map('n', '<C-p>'		, '<cmd>HopWord<CR>'				, nore_opts)
+map('n', '<space>h'	, '<cmd>noh<CR>'						, nore_opts)
 
 	-- zen mode
-map("n", "<leader>e", ":TZNarrow<CR>"			, {})
-map("v", "<leader>n", ":'<,'>TZNarrow<CR>", {})
-map("n", "<leader>f", ":TZFocus<CR>"			, {})
-map("n", "<leader>m", ":TZMinimalist<CR>"	, {})
-map("n", "<leader>n", ":TZAtaraxis<CR>"		, {})
+map("n", "<leader>e", "<cmd>TZNarrow<CR>"			, {})
+map("v", "<leader>n", "<cmd>'<,'>TZNarrow<CR>", {})
+map("n", "<leader>f", "<cmd>TZFocus<CR>"			, {})
+map("n", "<leader>m", "<cmd>TZMinimalist<CR>"	, {})
+map("n", "<leader>n", "<cmd>TZAtaraxis<CR>"		, {})
+
+	-- trouble
+map("n", "<leader>tt", "<cmd>TroubleToggle<CR>", nore_opts)
+map("n", "<leader>tq", "<cmd>TroubleToggle quickfix<CR>", nore_opts)
+map("n", "<leader>tl", "<cmd>TroubleToggle loclist<CR>", nore_opts)

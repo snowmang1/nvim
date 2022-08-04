@@ -11,6 +11,11 @@ end
 return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'					-- Package Manager
+	use {
+  "folke/trouble.nvim",
+  requires = "kyazdani42/nvim-web-devicons",
+  config = Get_setup('trouble'),
+	}
 	use({
 		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 		config = Get_setup('lsp_lines')
