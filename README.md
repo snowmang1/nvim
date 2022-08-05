@@ -13,10 +13,18 @@
 - [ nvim-lsp ]( https://github.com/neovim/nvim-lspconfig )
 - [ nvim-treesitter ]( https://github.com/nvim-treesitter/nvim-treesitter )
 - [ nvim-tree ]( https://github.com/kyazdani42/nvim-tree.lua )
+- [ trouble ]( https://github.com/folke/trouble.nvim )
+- [ oxocarbon ]( https://github.com/shaunsingh/oxocarbon.nvim )
+- [ true-zen ]( https://github.com/Pocco81/true-zen.nvim )
+- [ nvim-ts-rainbow ]( https://github.com/p00f/nvim-ts-rainbow )
+	- rainbow colored delimiters
+- [ alpha ]( https://github.com/goolord/alpha-nvim )
 ## setup
 1. use the [quick start file](https://github.com/snowmang1/nvim/blob/2c3e351dc346cf31cf38f3b870452286f08ec9e5/.quick_start.sh) to initialize your repo when you first clone.
 	- or anytime I include a new lsp
 2. go to your [packer plugin file](https://github.com/snowmang1/nvim/blob/2c3e351dc346cf31cf38f3b870452286f08ec9e5/lua/plugins.lua) and run `PackerSync` as a vim cmd.
 3. The last step is to source your vim file and enjoy.
 
-
+## Dependencies
+- rust:latest
+- [packer]( https://github.com/wbthomason/packer.nvim )
