@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
 	})
 	use({
 		"Pocco81/true-zen.nvim",
+		branch = 'main',
 		config = Get_setup('zen')
 	})
 	use ({
