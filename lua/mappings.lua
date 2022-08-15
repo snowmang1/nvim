@@ -35,11 +35,11 @@ map('n', '<C-p>'		, '<cmd>HopWord<CR>'				, nore_opts)
 map('n', '<space>h'	, '<cmd>noh<CR>'						, nore_opts)
 
 	-- zen mode
-map("n", "<leader>e", "<cmd>TZNarrow<CR>"			, {})
-map("v", "<leader>n", "<cmd>'<,'>TZNarrow<CR>", {})
-map("n", "<leader>f", "<cmd>TZFocus<CR>"			, {})
-map("n", "<leader>m", "<cmd>TZMinimalist<CR>"	, {})
-map("n", "<leader>n", "<cmd>TZAtaraxis<CR>"		, {})
+map("n", "<leader>e", "<cmd>TZNarrow<CR>"			, nore_opts)
+map("v", "n", "<cmd>'<,'>TZNarrow<CR>", {silent = true})
+map("n", "<leader>f", "<cmd>TZFocus<CR>"			, nore_opts)
+map("n", "<leader>m", "<cmd>TZMinimalist<CR>"	, nore_opts)
+map("n", "<leader>n", "<cmd>TZAtaraxis<CR>"		, nore_opts)
 
 	-- trouble
 map("n", "<leader>tt", "<cmd>TroubleToggle<CR>", nore_opts)
