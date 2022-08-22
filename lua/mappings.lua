@@ -34,13 +34,6 @@ map('i', '<C-d>'		, '<esc>yypA'						, {silent = true})
 map('n', '<C-p>'		, '<cmd>HopWord<CR>'				, nore_opts)
 map('n', '<space>h'	, '<cmd>noh<CR>'						, nore_opts)
 
-	-- zen mode
-map("n", "<leader>e", "<cmd>TZNarrow<CR>"			, nore_opts)
-map("v", "n", "<cmd>'<,'>TZNarrow<CR>", {silent = true})
-map("n", "<leader>f", "<cmd>TZFocus<CR>"			, nore_opts)
-map("n", "<leader>m", "<cmd>TZMinimalist<CR>"	, nore_opts)
-map("n", "<leader>n", "<cmd>TZAtaraxis<CR>"		, nore_opts)
-
 	-- trouble
 map("n", "<leader>tt", "<cmd>TroubleToggle<CR>", nore_opts)
 map("n", "<leader>tq", "<cmd>TroubleToggle quickfix<CR>", nore_opts)
