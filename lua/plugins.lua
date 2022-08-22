@@ -35,11 +35,6 @@ return require('packer').startup(function(use)
 		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 		config = Get_setup('lsp_lines')
 	})
-	use({
-		"Pocco81/true-zen.nvim",
-		branch = 'main',
-		config = Get_setup('zen')
-	})
 	use ({
 		'p00f/nvim-ts-rainbow',
 		branch = 'master',
