@@ -38,3 +38,7 @@ map('n', '<space>h'	, '<cmd>noh<CR>'						, nore_opts)
 map("n", "<leader>tt", "<cmd>TroubleToggle<CR>", nore_opts)
 map("n", "<leader>tq", "<cmd>TroubleToggle quickfix<CR>", nore_opts)
 map("n", "<leader>tl", "<cmd>TroubleToggle loclist<CR>", nore_opts)
+
+	-- hop
+map("n", "<leader>hw", "<cmd>HopWord<CR>", nore_opts)
+
