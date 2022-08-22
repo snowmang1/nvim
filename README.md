@@ -5,6 +5,10 @@
 - options with focus twards programming
 - custom made lualine (starting from evil line WIP)
 ![snowline](readme_data/lualine_minimal.png)
+### Shortcuts (getting started)
+- ; = leader key
+- <leader>hw	= Hop to word
+- <ctrl>n	= open file tree
 ### Plugins
 - [lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [hop](https://github.com/phaazon/hop.nvim)
@@ -15,7 +19,6 @@
 - [ nvim-tree ]( https://github.com/kyazdani42/nvim-tree.lua )
 - [ trouble ]( https://github.com/folke/trouble.nvim )
 - [ oxocarbon ]( https://github.com/shaunsingh/oxocarbon.nvim )
-- [ true-zen ]( https://github.com/Pocco81/true-zen.nvim )
 - [ nvim-ts-rainbow ]( https://github.com/p00f/nvim-ts-rainbow )
 	- rainbow colored delimiters
 - [ alpha ]( https://github.com/goolord/alpha-nvim )
