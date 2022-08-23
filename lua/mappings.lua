@@ -41,4 +41,3 @@ map("n", "<leader>tl", "<cmd>TroubleToggle loclist<CR>", nore_opts)
 
 	-- hop
 map("n", "<leader>hw", "<cmd>HopWord<CR>", nore_opts)
-
