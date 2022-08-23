@@ -12,6 +12,12 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'					-- Package Manager
 	use {
+		'nvim-telescope/telescope.nvim',
+		tag = '0.1.0',
+		config = Get_setup('tele'),
+		requires = { {'kyazdani42/nvim-web-devicons'},{'BurntSushi/ripgrep'}, {'nvim-lua/plenary.nvim'} }
+	}
+	use {
 		'norcalli/nvim-colorizer.lua',
 		config = Get_setup('nvim-color')
 	}
