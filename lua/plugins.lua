@@ -12,6 +12,10 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'					-- Package Manager
 	use {
+		'norcalli/nvim-colorizer.lua',
+		config = Get_setup('nvim-color')
+	}
+	use {
 		'j-hui/fidget.nvim',
 		config = Get_setup('fidget')
 	}
