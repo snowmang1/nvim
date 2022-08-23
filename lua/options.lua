@@ -6,6 +6,6 @@ local cmd = vim.cmd
 
 -- window local
 wo.number = true
-o.cursorline = false
+o.cursorline = true
 o.signcolumn = 'number'
 cmd('set mouse= ') -- disables mouse control
