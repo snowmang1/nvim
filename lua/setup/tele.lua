@@ -29,3 +29,11 @@ require('telescope').setup{
     -- please take a look at the readme of the extension you want to configure
   }
 }
+
+local map = vim.api.nvim_set_keymap
+local nore_opts = { noremap = true, silent = true }
+map('n', '<leader>tff', '<cmd>Telescope find_files<cr>', nore_opts)
+map('n', '<leader>tfg', '<cmd>Telescope live_grep<cr>', nore_opts)
+map('n', '<leader>tfb', '<cmd>Telescope buffers<cr>', nore_opts)
+map('n', '<leader>tfh', '<cmd>Telescope help_tags<cr>', nore_opts)
+
