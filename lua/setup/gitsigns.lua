@@ -75,6 +75,7 @@ current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d>",
     map('n', '<leader>hd', gs.diffthis)
     map('n', '<leader>hD', function() gs.diffthis('~') end)
     map('n', '<leader>td', gs.toggle_deleted)
+		map('n', '<leader>hn', '<cmd>Gitsigns next_hunk<CR>', {})
 
     -- Text object
     map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
