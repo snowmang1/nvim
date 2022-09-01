@@ -52,7 +52,9 @@ require('lspconfig')['rust_analyzer'].setup{
     ["rust-analyzer"] = {}
   }
 }
-require('lspconfig')['ocaml'].setup{
-	on_attach,
+require('lspconfig')['ocamllsp'].setup{
+	on_attach = on_attach,
 	flags = lsp_flags,
+	cmd = {"ocamllsp"},
+	filetypes = { "ocaml", "ocaml.menhir", "ocaml.interface", "ocaml.ocamllex", "reason", "dune" },
 }
