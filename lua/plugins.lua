@@ -68,7 +68,10 @@ return require('packer').startup(function(use)
 		branch = 'v2', -- optional but strongly recommended
 		config = Get_setup('hop')
 	}
-  use 'neovim/nvim-lspconfig'						-- Configuration for Nvim LSP, config is in ftplugins
+  use {
+		'neovim/nvim-lspconfig',						-- Configuration for Nvim LSP, config is in ftplugins
+		config = Get_setup('lsp-config')
+	}
   use {																	-- Treesitter model for syntax highlighting
 		'nvim-treesitter/nvim-treesitter',
 		config = Get_setup('nvim-treesitter'),
