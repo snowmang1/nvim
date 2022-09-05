@@ -62,7 +62,6 @@ return require('packer').startup(function(use)
 		config = Get_setup('ts-rainbow')
 	})
 	use {'nvim-treesitter/nvim-treesitter-textobjects'}
-	use {'shaunsingh/oxocarbon.nvim', run = './install.sh'} -- oxocarbon color scheme
 	use {
     'goolord/alpha-nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
@@ -106,7 +105,5 @@ return require('packer').startup(function(use)
 		config = Get_setup('diffview'),
 		requires = 'nvim-lua/plenary.nvim'
 	}
-	------------- colors
-	use 'ray-x/aurora'
 end)
 

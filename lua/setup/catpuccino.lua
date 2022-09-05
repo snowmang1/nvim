@@ -38,7 +38,8 @@ require("catppuccin").setup({
 		ts_rainbow = true,
 		telescope = true,
 		lsp_trouble = true,
-		fidget = true
+		fidget = true,
+		neogit = true
 	},
 	color_overrides = {},
 	highlight_overrides = {},
