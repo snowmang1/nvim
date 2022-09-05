@@ -52,6 +52,10 @@ require('lspconfig')['rust_analyzer'].setup{
     ["rust-analyzer"] = {}
   }
 }
+require('lspconfig')['efm'].setup{
+  settings = ..., -- You must populate this according to the EFM readme
+  filetypes = { 'cpp' }
+}
 require('lspconfig')['ocamllsp'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,

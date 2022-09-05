@@ -12,6 +12,16 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'					-- Package Manager
 	use {
+		'catppuccin/nvim',
+		as = 'catppuccin',
+		run = ':CatppuccinCompile',
+		config = Get_setup('catpuccino'),
+	}
+	use {
+		'mfussenegger/nvim-dap',
+		config = Get_setup('dap')
+	}
+	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.0',
 		config = Get_setup('tele'),
