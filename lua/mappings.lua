@@ -33,6 +33,7 @@ map('n', '<C-n>'		, '<cmd>NvimTreeToggle<CR>'	, nore_opts)
 map('i', '<C-d>'		, '<esc>yypA'						, {silent = true})
 map('n', '<C-p>'		, '<cmd>HopWord<CR>'				, nore_opts)
 map('n', '<space>h'	, '<cmd>noh<CR>'						, nore_opts)
+vim.keymap.set('', '<Leader>l', require('lsp_lines').toggle, { desc = 'Toggle lsp_lines' })
 
 	-- trouble
 map("n", "<leader>tt", "<cmd>TroubleToggle<CR>", nore_opts)
@@ -41,3 +42,9 @@ map("n", "<leader>tl", "<cmd>TroubleToggle loclist<CR>", nore_opts)
 
 	-- hop
 map("n", "<leader>hw", "<cmd>HopWord<CR>", nore_opts)
+
+ -- telescope
+map('n', '<leader>tff', '<cmd>Telescope find_files<cr>', nore_opts)
+map('n', '<leader>tfg', '<cmd>Telescope live_grep<cr>', nore_opts)
+map('n', '<leader>tfb', '<cmd>Telescope buffers<cr>', nore_opts)
+map('n', '<leader>tfh', '<cmd>Telescope help_tags<cr>', nore_opts)
