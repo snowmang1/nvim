@@ -19,7 +19,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+  vim.keymap.set('n', '<space>lspk', vim.lsp.buf.signature_help, bufopts)
   vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wl', function()
@@ -56,9 +56,13 @@ require('lspconfig')['efm'].setup{
   settings = ..., -- You must populate this according to the EFM readme
   filetypes = { 'cpp' }
 }
+
+local nvim_lsp = require 'lspconfig'
 require('lspconfig')['ocamllsp'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 	cmd = {"ocamllsp"},
 	filetypes = { "ocaml", "ocaml.menhir", "ocaml.interface", "ocaml.ocamllex", "reason", "dune" },
+	root_dir = nvim_lsp.util.root_pattern("*.opam", "esy.json", "package.json",
+		".git", "dune-project", "dune-workspace")
 }
