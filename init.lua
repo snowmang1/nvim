@@ -7,7 +7,7 @@ require('mappings')
 require('options')
 
 -- custom filetype command
-vim.cmd [[ autocmd BufRead,BufNewFile *.org set filetype=org ]]
+vim.cmd [[ autocmd BufRead,BufNewFile *.org set filetype=org  ]]
 
 vim.g.catppuccin_flavour = 'mocha'
 

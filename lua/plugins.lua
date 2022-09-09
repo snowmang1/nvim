@@ -18,10 +18,6 @@ return require('packer').startup(function(use)
 		config = Get_setup('catpuccino'),
 	}
 	use {
-		'mfussenegger/nvim-dap',
-		config = Get_setup('dap')
-	}
-	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.0',
 		config = Get_setup('tele'),

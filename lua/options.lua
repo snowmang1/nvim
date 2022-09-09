@@ -10,4 +10,3 @@ o.cursorline = false
 o.signcolumn = 'number'
 cmd('set mouse= ') -- disables mouse control
 vim.opt.termguicolors = true
-

@@ -2,10 +2,10 @@
 require'nvim-treesitter.configs'.setup {
 	-- a list of languages to include parsers for
 	ensure_installed = {'ocaml', 'cpp', 'c', 'lua', 'rust', 'bash',
-		'dockerfile', 'hcl', 'help', 'latex', 'python'},
+		'dockerfile', 'hcl', 'help', 'latex', 'python', 'toml'},
 
 	-- Install parser synchronously
-	sync_install = false,
+	sync_install = true,
 
 	-- Automatically install missing parsers when entering buffer
 	auto_install = true,
