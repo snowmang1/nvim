@@ -32,6 +32,9 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
 
+-- helps with grabing and using util functions
+local nvim_lsp = require 'lspconfig'
+
 local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
@@ -52,17 +55,31 @@ require('lspconfig')['rust_analyzer'].setup{
     ["rust-analyzer"] = {}
   }
 }
-require('lspconfig')['efm'].setup{
-  settings = ..., -- You must populate this according to the EFM readme
-  filetypes = { 'cpp' }
-}
 
-local nvim_lsp = require 'lspconfig'
+require'lspconfig'.clangd.setup{
+	on_attach = on_attach,
+	flags = lsp_flags,
+	cmd = { 'clangd' },
+	filetypes = {
+		'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto'
+	},
+	root_dir = nvim_lsp.util.root_pattern(
+          '.clangd',
+          '.clang-tidy',
+          '.clang-format',
+          'compile_commands.json',
+          'compile_flags.txt',
+          'configure.ac',
+          '.git'
+        ),
+	single_file_support = true
+	}
+
 require('lspconfig')['ocamllsp'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
-	cmd = {"ocamllsp"},
-	filetypes = { "ocaml", "ocaml.menhir", "ocaml.interface", "ocaml.ocamllex", "reason", "dune" },
-	root_dir = nvim_lsp.util.root_pattern("*.opam", "esy.json", "package.json",
-		".git", "dune-project", "dune-workspace")
+	cmd = {'ocamllsp'},
+	filetypes = { 'ocaml', 'ocaml.menhir', 'ocaml.interface', 'ocaml.ocamllex', 'reason', 'dune' },
+	root_dir = nvim_lsp.util.root_pattern('*.opam', 'esy.json', 'package.json',
+		'.git', 'dune-project', 'dune-workspace')
 }
