@@ -12,6 +12,10 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'					-- Package Manager
 	use {
+    'numToStr/Comment.nvim',
+    config = Get_setup('comment')
+	}
+	use {
 		'catppuccin/nvim',
 		as = 'catppuccin',
 		run = ':CatppuccinCompile',
