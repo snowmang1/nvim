@@ -43,11 +43,6 @@ return require('packer').startup(function(use)
 		tag = 'release' -- To use the latest release
 	}
 	use {
-		'TimUntersberger/neogit',
-		requires = 'nvim-lua/plenary.nvim',
-		config = Get_setup('neogit')
-	}
-	use {
 		"folke/trouble.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
 		config = Get_setup('trouble'),
