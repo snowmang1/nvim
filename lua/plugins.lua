@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
 		'catppuccin/nvim',
 		as = 'catppuccin',
 		run = ':CatppuccinCompile',
-		config = Get_setup('catpuccino'),
+		config = Get_setup('catppuccin'),
 	}
 	use {
 		'nvim-telescope/telescope.nvim',
