@@ -75,11 +75,11 @@ require'lspconfig'.clangd.setup{
 	single_file_support = true
 	}
 
-require('lspconfig')['ocamllsp'].setup{
+require'lspconfig'.ocamllsp.setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 	cmd = {'ocamllsp'},
 	filetypes = { 'ocaml', 'ocaml.menhir', 'ocaml.interface', 'ocaml.ocamllex', 'reason', 'dune' },
-	root_dir = nvim_lsp.util.root_pattern('*.opam', 'esy.json', 'package.json',
-		'.git', 'dune-project', 'dune-workspace')
+	root_dir = nvim_lsp.util.root_pattern("/Users/evandrake/.opam/4.14.0/bin/ocamllsp", "*.opam",
+		".git", "dune-project", "dune-workspace"),
 }
