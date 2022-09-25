@@ -61,7 +61,7 @@ require'lspconfig'.clangd.setup{
 	flags = lsp_flags,
 	cmd = { 'clangd' },
 	filetypes = {
-		'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto'
+		'cpp', 'objc', 'objcpp', 'cuda', 'proto'
 	},
 	root_dir = nvim_lsp.util.root_pattern(
           '.clangd',
