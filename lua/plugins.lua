@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
 		run = ':CatppuccinCompile',
 		config = Get_setup('catppuccin'),
 	}
+	use { 'ray-x/aurora'}
 	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.0',
@@ -40,7 +41,7 @@ return require('packer').startup(function(use)
 		requires = 'nvim-lua/plenary.nvim',
 		config = Get_setup('gitsigns'),
 		branch = "main",
-		tag = 'release' -- To use the latest release
+		tag = 'release' -- latest release
 	}
 	use {
 		"folke/trouble.nvim",

@@ -29,7 +29,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  -- vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
 
 -- helps with grabing and using util functions
@@ -61,7 +61,7 @@ require'lspconfig'.clangd.setup{
 	flags = lsp_flags,
 	cmd = { 'clangd' },
 	filetypes = {
-		'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto'
+		'cpp', 'objc', 'objcpp', 'cuda', 'proto', 'c', 'hpp', 'h'
 	},
 	root_dir = nvim_lsp.util.root_pattern(
           '.clangd',
@@ -82,11 +82,11 @@ require'lspconfig'.tsserver.setup{
 	root_dir = nvim_lsp.util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")
 }
 
-require('lspconfig')['ocamllsp'].setup{
+require'lspconfig'.ocamllsp.setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 	cmd = {'ocamllsp'},
 	filetypes = { 'ocaml', 'ocaml.menhir', 'ocaml.interface', 'ocaml.ocamllex', 'reason', 'dune' },
-	root_dir = nvim_lsp.util.root_pattern('*.opam', 'esy.json', 'package.json',
-		'.git', 'dune-project', 'dune-workspace')
+	root_dir = nvim_lsp.util.root_pattern("/Users/evandrake/.opam/4.14.0/bin/ocamllsp", "*.opam",
+		".git", "dune-project", "dune-workspace"),
 }

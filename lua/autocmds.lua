@@ -21,8 +21,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	group = termGrp,
 })
 
--- Packer auto sync
-
+	-- Packer auto sync
 vim.cmd [[
 	augroup packer_user_config
 		autocmd!
