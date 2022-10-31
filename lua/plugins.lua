@@ -29,10 +29,6 @@ return require('packer').startup(function(use)
 		requires = { {'kyazdani42/nvim-web-devicons'},{'BurntSushi/ripgrep'}, {'nvim-lua/plenary.nvim'} }
 	}
 	use {
-		'norcalli/nvim-colorizer.lua',
-		config = Get_setup('nvim-color')
-	}
-	use {
 		'j-hui/fidget.nvim',
 		config = Get_setup('fidget')
 	}
@@ -48,10 +44,6 @@ return require('packer').startup(function(use)
 		requires = "kyazdani42/nvim-web-devicons",
 		config = Get_setup('trouble'),
 	}
-	use({
-		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		config = Get_setup('lsp_lines')
-	})
 	use ({
 		'p00f/nvim-ts-rainbow',
 		branch = 'master',

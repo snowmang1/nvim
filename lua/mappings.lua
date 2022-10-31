@@ -33,7 +33,6 @@ map('n', '<C-n>'		, '<cmd>NvimTreeToggle<CR>'	, nore_opts)
 map('i', '<C-d>'		, '<esc>yypA'						, {silent = true})
 map('n', '<C-p>'		, '<cmd>HopWord<CR>'				, nore_opts)
 map('n', '<space>h'	, '<cmd>noh<CR>'						, nore_opts)
-vim.keymap.set('', '<Leader>l', require('lsp_lines').toggle, { desc = 'Toggle lsp_lines' })
 
 	-- trouble
 map("n", "<leader>tt", "<cmd>TroubleToggle<CR>", nore_opts)
