@@ -16,6 +16,13 @@ return require('packer').startup(function(use)
     config = Get_setup('comment')
 	}
 	use {
+		'tamton-aquib/duck.nvim',
+		config = function()
+        vim.keymap.set('n', '<leader>dd', function() require("duck").hatch("🐈") end, {})
+        vim.keymap.set('n', '<leader>dk', function() require("duck").cook() end, {})
+    end
+	}
+	use {
 		'catppuccin/nvim',
 		as = 'catppuccin',
 		run = ':CatppuccinCompile',

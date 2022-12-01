@@ -31,6 +31,9 @@
 - [ Comment ]( https://github.com/numToStr/Comment.nvim )
 - [ fidget ]( https://github.com/j-hui/fidget.nvim )
 - [ nvim-colorizer ]( https://github.com/norcalli/nvim-colorizer.lua )
+- [duck.nvim]( https://github.com/tamton-aquib/duck.nvim.git )
+    - ` ;dd ` will release a friend into your file
+    - ` ;dk ` will kill that friend
 ## setup
 1. use the [ quick start file ]( https://github.com/snowmang1/nvim/blob/2c3e351dc346cf31cf38f3b870452286f08ec9e5/.quick_start.sh ) to initialize your repo when you first clone.
 	- or anytime I include a new lsp
