@@ -28,3 +28,4 @@ vim.cmd [[
 		autocmd BufWritePost plugins.lua source <afile> | PackerSync
 	augroup end
 ]]
+

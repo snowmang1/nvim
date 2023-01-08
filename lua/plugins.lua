@@ -12,6 +12,12 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'					-- Package Manager
 	use {
+		'LhKipp/nvim-nu',
+		config = Get_setup('nvim-nu'),
+		requires = { {'jose-elias-alvarez/null-ls.nvim'} },
+		run = ':TSInstall nu'
+	}
+	use {
     'numToStr/Comment.nvim',
     config = Get_setup('comment')
 	}

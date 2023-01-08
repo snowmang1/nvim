@@ -1,0 +1,32 @@
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.workspace.library": [
+        "/Users/evandliatrio/.config/nvim",
+        "/Users/evandliatrio/.local/share/nvim/site",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/aurora",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/catppuccin",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/hop.nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-surround",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/packer.nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/ripgrep",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
+        "/usr/local/Cellar/neovim/HEAD-4703e56/share/nvim/runtime",
+        "/usr/local/Cellar/neovim/HEAD-4703e56/share/nvim/runtime/pack/dist/opt/matchit",
+        "/Users/evandliatrio/.local/share/nvim/site/pack/packer/start/catppuccin/after",
+        "${3rd}/luassert/library"
+    ]
+}
