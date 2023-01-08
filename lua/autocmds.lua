@@ -29,3 +29,9 @@ vim.cmd [[
 	augroup end
 ]]
 
+vim.cmd [[
+	augroup cat_compile
+		autocmd!
+		autocmd BufWritePost catppuccin.lua source <afile> | CatppuccinCompile
+	augroup end
+]]
