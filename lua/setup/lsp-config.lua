@@ -59,19 +59,16 @@ require('lspconfig')['rust_analyzer'].setup{
 require'lspconfig'.clangd.setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
-	cmd = { 'clangd' },
-	filetypes = {
-		'cpp', 'objc', 'objcpp', 'cuda', 'proto', 'c', 'hpp', 'h'
-	},
+	filetypes = { 'cpp', 'objc', 'objcpp', 'cuda', 'proto', 'c', 'hpp', 'h' },
 	root_dir = nvim_lsp.util.root_pattern(
-          '.clangd',
-          '.clang-tidy',
-          '.clang-format',
-          'compile_commands.json',
-          'compile_flags.txt',
-          'configure.ac',
-          '.git'
-        ),
+		'.clangd',
+		'.clang-tidy',
+		'.clang-format',
+		'compile_commands.json',
+		'compile_flags.txt',
+		'configure.ac',
+		'.git'
+	),
 	single_file_support = true
 }
 
