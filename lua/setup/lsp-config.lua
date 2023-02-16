@@ -56,6 +56,35 @@ require('lspconfig')['rust_analyzer'].setup{
   }
 }
 
+require'lspconfig'.lua_ls.setup {
+	cmd       = { "lua-language-server" },
+	fieltypes = { "lua" },
+	log_level = 2,
+	root_dir  = nvim_lsp.util.root_pattern("/opt/homebrew/Cellar/lua-language-server/3.6.11/bin/lua-language-server", ".luarc.json",
+		".luarc.jsonc", ".luacheckrc", ".stylua.toml", "stylua.toml", "selene.toml", "selene.yml", ".git"),
+	single_file_support = true,
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
+
 require'lspconfig'.clangd.setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
