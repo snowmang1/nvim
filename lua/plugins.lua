@@ -21,12 +21,13 @@ return require('packer').startup(function(use)
     'numToStr/Comment.nvim',
     config = Get_setup('comment')
 	}
+	use "lukas-reineke/indent-blankline.nvim"
 	use {
-		'tamton-aquib/duck.nvim',
-		config = function()
-        vim.keymap.set('n', '<leader>dd', function() require("duck").hatch("🐈") end, {})
-        vim.keymap.set('n', '<leader>dk', function() require("duck").cook() end, {})
-    end
+		"giusgad/pets.nvim",
+		requires = {
+			"edluffy/hologram.nvim",
+			"MunifTanjim/nui.nvim",
+		}
 	}
 	use {
 		'catppuccin/nvim',
@@ -58,7 +59,7 @@ return require('packer').startup(function(use)
 		config = Get_setup('trouble'),
 	}
 	use ({
-		'p00f/nvim-ts-rainbow',
+		'HiPhish/nvim-ts-rainbow2',
 		branch = 'master',
 		config = Get_setup('ts-rainbow')
 	})

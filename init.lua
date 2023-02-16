@@ -11,5 +11,5 @@ require('user_cmd')
 vim.cmd [[ autocmd BufRead,BufNewFile *.org set filetype=org  ]]
 
 vim.cmd.colorscheme 'catppuccin'
-vim.diagnostic.config({ virtual_text = false })
+vim.diagnostic.config({ virtual_text = true })
 vim.diagnostic.config({ virtual_lines = true })

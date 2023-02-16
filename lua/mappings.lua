@@ -43,7 +43,7 @@ map("n", "<leader>tl", "<cmd>TroubleToggle loclist<CR>", nore_opts)
 map("n", "<leader>hw", "<cmd>HopWord<CR>", nore_opts)
 
  -- telescope
-map('n', '<leader>tff', '<cmd>Telescope find_files<cr>', nore_opts)
-map('n', '<leader>tfg', '<cmd>Telescope live_grep<cr>' , nore_opts)
-map('n', '<leader>tfb', '<cmd>Telescope buffers<cr>'   , nore_opts)
-map('n', '<leader>tfh', '<cmd>Telescope help_tags<cr>' , nore_opts)
+map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', nore_opts)
+map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>' , nore_opts)
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>'   , nore_opts)
+map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>' , nore_opts)

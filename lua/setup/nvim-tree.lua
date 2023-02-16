@@ -5,7 +5,8 @@ local map = {
 	{ key = "<2-LeftMouse>", action = ""},
 	{ key = "<C-k>", action = ""},
 	{ key = "<C-i>", action = "toggle_file_info"},
-	{ key = "<leader>s", action = "split"}
+	{ key = "<leader>s", action = "split"},
+	{ key = "{", action = "cd"}
 }
 
 require'nvim-tree'.setup {
