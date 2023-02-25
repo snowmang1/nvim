@@ -23,13 +23,6 @@ return require('packer').startup(function(use)
 	}
 	use "lukas-reineke/indent-blankline.nvim"
 	use {
-		"giusgad/pets.nvim",
-		requires = {
-			"edluffy/hologram.nvim",
-			"MunifTanjim/nui.nvim",
-		}
-	}
-	use {
 		'catppuccin/nvim',
 		as = 'catppuccin',
 		run = ':CatppuccinCompile',
