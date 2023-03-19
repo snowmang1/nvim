@@ -21,14 +21,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	group = termGrp,
 })
 
-	-- Packer auto sync
-vim.cmd [[
-	augroup packer_user_config
-		autocmd!
-		autocmd BufWritePost plugins.lua source <afile> | PackerSync
-	augroup end
-]]
-
 vim.cmd [[
 	augroup cat_compile
 		autocmd!
