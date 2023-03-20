@@ -8,15 +8,30 @@ return {
 			'williamboman/mason.nvim',
 		},
 		config = function ()
-			require'lspconfig'.lua_ls.setup{}
-			require'lspconfig'.clangd.setup{}
-			require'lspconfig'.rust_analyzer.setup{}
+			local navic = require("nvim-navic")
+			-- custom on_attach to utilize navic
+			require'lspconfig'.lua_ls.setup{
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end
+			}
+			require'lspconfig'.clangd.setup{
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end
+			}
+			require'lspconfig'.rust_analyzer.setup{
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end
+			}
 		end,
 	},
 
 	{
     'williamboman/mason-lspconfig.nvim',
-		events = { "BufReadPre", "BufNewFile" },
+		lazy = true,
+		events = { 'LspAttach' },
 		dependancies = {
 			'williamboman/mason.nvim',
 		},
@@ -52,6 +67,7 @@ return {
 
 	{
 		'williamboman/mason.nvim',
+		lazy = true,
 		cmd = 'Mason',
 		config = function (_, opts)
 			require'mason'.setup(opts)

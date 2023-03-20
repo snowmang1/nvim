@@ -34,6 +34,8 @@ return {
 
 	{
 		"folke/trouble.nvim",
+		lazy = true,
+		module = false,
 		cmd = { "TroubleToggle", "Trouble" },
 		keys = {
 			{ "<leader>tt", "<cmd>TroubleToggle<CR>",						desc =  "Trouble catchall window"},
