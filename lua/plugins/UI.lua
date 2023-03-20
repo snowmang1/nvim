@@ -4,7 +4,6 @@ return {
 		'goolord/alpha-nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' },
 		event = "BufEnter",
-		lazy = true,
 		config = function ()
 			require'alpha'.setup(require'alpha.themes.startify'.config)
 		end,
@@ -54,17 +53,21 @@ return {
 	-- bufferline
   {
     "akinsho/bufferline.nvim",
-		event = "VeryLazy",
+		events = 'BufNew',
 		opts = {
 			options = {
 				mode = "buffer",
 				indicator = { style = 'icon' },
 				buffer_close_icon = ' ',
+				truncate_names = true,
 				modified_icon = '●',
-				close_icon = ' ',
 				left_trunc_marker = '',
 				right_trunc_marker = '',
-				separator_style = "slant",
+				separator_style = "",
+				show_buffer_close_icons = false,
+				show_close_icon = false,
+				show_duplicate_prefix = false,
+				show_buffer_icons = true,
 				enforce_regular_tabs = true,
 				always_show_bufferline = false,
 				color_icons = true, -- whether or not to add the filetype icon highlights
@@ -106,11 +109,47 @@ return {
 
 	{
 		"SmiteshP/nvim-navic",
-		version = false,
 		lazy = true,
+		event = 'LspAttach',
+		version = false,
 		dependencies = { "neovim/nvim-lspconfig" },
+		opts = {
+			icons = {
+        File          = " ",
+        Module        = " ",
+        Namespace     = " ",
+        Package       = " ",
+        Class         = " ",
+        Method        = " ",
+        Property      = " ",
+        Field         = " ",
+        Constructor   = " ",
+        Enum          = "練",
+        Interface     = "練",
+        Function      = " ",
+        Variable      = " ",
+        Constant      = " ",
+        String        = " ",
+        Number        = " ",
+        Boolean       = "◩ ",
+        Array         = " ",
+        Object        = " ",
+        Key           = " ",
+        Null          = "ﳠ ",
+        EnumMember    = " ",
+        Struct        = " ",
+        Event         = " ",
+        Operator      = " ",
+        TypeParameter = " ",
+    },
+    highlight = false,
+    separator = "  ",
+    depth_limit = 4,
+    depth_limit_indicator = "",
+    safe_output = true
+		},
 		config = function (_,opts)
-			require'nvim-navic'.setup();
+			require'nvim-navic'.setup(opts);
 		end
 	},
 
