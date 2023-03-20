@@ -12,8 +12,8 @@ return {
 
 	{
 		'echasnovski/mini.pairs',
-		version = false,
 		event = 'BufEnter',
+		version = false,
 		config = function (_, opts)
 			require'mini.pairs'.setup(opts)
 		end,
@@ -31,7 +31,7 @@ return {
 	{
 		'echasnovski/mini.comment',
 		version = false,
-		event = 'VeryLazy',
+		event = 'BufEnter',
 		config = function (_, opts)
 			require'mini.comment'.setup(opts)
 		end

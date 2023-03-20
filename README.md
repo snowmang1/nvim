@@ -1,45 +1,39 @@
 # This is my NeoVim config
+A layout very close to LazyVim that is a bit stripped down for less
+distractions.
 ## Features
-- pure lua config (with external exceptions)
-- mappings with focus on 'pure vim' experience
-- options with focus twards programming
-- custom autocmd's
-- custom made lualine (starting from evil line WIP)
-![ snowline ]( readme_data/lualine_minimal.png )
+- built in lsp, linter, & formatter support
+- custom catppuccin style lualine
+![](readme_data/cat_lualine.png)
 ### Shortcuts ( getting started )
 - ; = leader key
-- <leader>hw	= Hop to word
 - <ctrl>n	= open file tree
 ### Plugins
-- [ lualine ](https://github.com/nvim-lualine/lualine.nvim) evil
-- [ hop ](https://github.com/phaazon/hop.nvim)
-- [ packer ]( https://github.com/wbthomason/packer.nvim )
-- [ diffview ](https://github.com/sindrets/diffview.nvim)
+- [ mason ]( https://github.com/williamboman/mason.nvim )
+- [ mason-lsp ]( https://github.com/williamboman/mason-lspconfig.nvim )
+- [ neo-tree ]( https://github.com/nvim-neo-tree/neo-tree.nvim )
+- [ lualine ]( https://github.com/nvim-lualine/lualine.nvim )
+- [ mini.comment ]( https://github.com/echasnovski/mini.comment )
+- [ mini.indentscope ]( https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md )
+- [ mini.pairs ]( https://github.com/echasnovski/mini.pairs )
+- [ bufferline ]( https://github.com/akinsho/bufferline.nvim )
+- [ nvim-navic ]( https://github.com/SmiteshP/nvim-navic )
+- [ nvim-notify ]( https://github.com/rcarriga/nvim-notify )
+- [ which-key.nvim ]( https://github.com/folke/which-key.nvim )
+- [ noice ]( https://github.com/folke/noice.nvim )
+- [ null-ls ]( https://github.com/jose-elias-alvarez/null-ls.nvim ) <- not yet operational
 - [ nvim-lsp ]( https://github.com/neovim/nvim-lspconfig )
 - [ nvim-treesitter ]( https://github.com/nvim-treesitter/nvim-treesitter )
-- [ nvim-tree ]( https://github.com/kyazdani42/nvim-tree.lua )
 - [ trouble ]( https://github.com/folke/trouble.nvim )
-- [ nvim-ts-rainbow ]( https://github.com/p00f/nvim-ts-rainbow )
-	- rainbow colored delimiters
 - [ alpha ]( https://github.com/goolord/alpha-nvim )
 - [ telescope ]( https://github.com/nvim-telescope/telescope.nvim#usage )
-- [ nvim-colorizer ]( https://github.com/norcalli/nvim-colorizer.lua )
 - [ gitsigns ]( https://github.com/lewis6991/gitsigns.nvim )
-- [ lsplines ]( https://sr.ht/~whynothugo/lsp_lines.nvim/ )
 - [ nvim-surround ]( https://github.com/kylechui/nvim-surround )
 - [ catppuccin ]( https://github.com/catppuccin/nvim )
-- [ Comment ]( https://github.com/numToStr/Comment.nvim )
-- [ fidget ]( https://github.com/j-hui/fidget.nvim )
-- [ nvim-colorizer ]( https://github.com/norcalli/nvim-colorizer.lua )
-- [duck.nvim]( https://github.com/tamton-aquib/duck.nvim.git )
-    - ` ;dd ` will release a friend into your file
-    - ` ;dk ` will kill that friend
 ## setup
-1. use the [ quick start file ]( https://github.com/snowmang1/nvim/blob/2c3e351dc346cf31cf38f3b870452286f08ec9e5/.quick_start.sh ) to initialize your repo when you first clone.
-	- or anytime I include a new lsp
-2. go to your [ packer plugin file ]( https://github.com/snowmang1/nvim/blob/2c3e351dc346cf31cf38f3b870452286f08ec9e5/lua/plugins.lua ) and run `PackerSync` as a vim cmd.
-3. The last step is to source your vim file and enjoy.
+1. Open any nvim buffer with `nvim`
+2. Should see the lazy.nvim UI
+3. Install all plugins with `I` key
 
 ## Dependencies
-- rust:latest
-- [ packer ]( https://github.com/wbthomason/packer.nvim )
+- lazy
