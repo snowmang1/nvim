@@ -35,7 +35,7 @@ local colors = {
 local Catpuccin = {
 	normal = {
     a = {bg = colors.flamingo, fg = colors.base, gui = 'bold'},
-    b = {bg = colors.base, fg = colors.flamingo},
+    b = {bg = colors.base, fg = colors.pink},
     c = {bg = colors.base, fg = colors.teal},
     x = {bg = colors.base, fg = colors.sky},
     y = {bg = colors.base, fg = colors.green},
@@ -43,7 +43,7 @@ local Catpuccin = {
   },
   insert = {
     a = {bg = colors.blue, fg = colors.base, gui = 'italic'},
-    b = {bg = colors.base, fg = colors.flamingo},
+    b = {bg = colors.base, fg = colors.pink},
     c = {bg = colors.base, fg = colors.teal},
     x = {bg = colors.base, fg = colors.sky},
     y = {bg = colors.base, fg = colors.green},
@@ -51,7 +51,7 @@ local Catpuccin = {
   },
   visual = {
 		a = {bg = colors.green, fg = colors.base, gui = ''},
-		b = {bg = colors.base, fg = colors.flamingo},
+		b = {bg = colors.base, fg = colors.pink},
 		c = {bg = colors.base, fg = colors.teal},
 		x = {bg = colors.base, fg = colors.sky},
 		y = {bg = colors.base, fg = colors.green},
@@ -59,7 +59,7 @@ local Catpuccin = {
   },
   replace = {
     a = {bg = colors.red, fg = colors.base, gui = ''},
-    b = {bg = colors.base, fg = colors.flamingo},
+    b = {bg = colors.base, fg = colors.pink},
     c = {bg = colors.base, fg = colors.teal},
     x = {bg = colors.base, fg = colors.sky},
     y = {bg = colors.base, fg = colors.green},
@@ -67,7 +67,7 @@ local Catpuccin = {
   },
   command = {
     a = {bg = colors.sky, fg = colors.base, gui = 'italic'},
-    b = {bg = colors.base, fg = colors.flamingo},
+    b = {bg = colors.base, fg = colors.pink},
     c = {bg = colors.base, fg = colors.teal},
     x = {bg = colors.base, fg = colors.sky},
     y = {bg = colors.base, fg = colors.green},
@@ -75,7 +75,7 @@ local Catpuccin = {
   },
   inactive = {
     a = {bg = colors.rosewater, fg = colors.base, gui = 'bold'},
-    b = {bg = colors.base, fg = colors.flamingo},
+    b = {bg = colors.base, fg = colors.pink},
     c = {bg = colors.base, fg = colors.teal},
     x = {bg = colors.base, fg = colors.sky},
     y = {bg = colors.base, fg = colors.green},
@@ -87,6 +87,8 @@ return {
 	"nvim-lualine/lualine.nvim",
 	event = "VeryLazy",
 	version = false,
+	dependencies = { "SmiteshP/nvim-navic" },
+
 	opts = {
 		options = {
     icons_enabled = true,
@@ -111,9 +113,9 @@ return {
 				{ 'mode', separator = { left = '', right = '' }, right_padding = 2 },
 			},
 			lualine_b = {'branch', 'diff', 'diagnostics'},
-			lualine_c = {'filename'},
-			lualine_x = {'encoding', 'filetype'},
-			lualine_y = {'progress'},
+			lualine_c = {},
+			lualine_x = {},
+			lualine_y = {{'encoding', color = {fg = colors.sky}}, {'filetype', color = {fg = colors.sky}}, 'progress'},
 			lualine_z = {'location'}
 		},
 		inactive_sections = {
@@ -131,19 +133,20 @@ return {
 	},
 
 	config = function (_, opts)
+		local navic = require('nvim-navic')
 		-- Inserts a component in lualine_c at left section
 		local function ins_left(component)
 			table.insert(opts.sections.lualine_c, component)
 		end
+		local function ins_right(component)
+			table.insert(opts.sections.lualine_x, component)
+		end
 
-		-- spacer for looks
 		ins_left {
-			function()
-				return '%='
-			end,
+			navic.get_location, cond = navic.is_available
 		}
 
-		ins_left {
+		ins_right {
 			-- Lsp server name .
 			function()
 				local msg = 'No Active Lsp'
@@ -161,9 +164,9 @@ return {
 				return msg
 			end,
 			icon = ' LSP:',
-			color = { fg = '#ffffff', gui = 'bold' },
+			color = { fg = colors.lavender, gui = 'bold' },
 		}
 
 		require'lualine'.setup(opts)
 	end
-}
+  }
