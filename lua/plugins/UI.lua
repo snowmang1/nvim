@@ -104,5 +104,15 @@ return {
 		end,
 	},
 
+	{
+		"SmiteshP/nvim-navic",
+		version = false,
+		lazy = true,
+		dependencies = { "neovim/nvim-lspconfig" },
+		config = function (_,opts)
+			require'nvim-navic'.setup();
+		end
+	},
+
   { "MunifTanjim/nui.nvim", lazy = true },
 }
