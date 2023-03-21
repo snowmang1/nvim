@@ -144,7 +144,7 @@ return {
     },
     highlight = false,
     separator = "  ",
-    depth_limit = 4,
+    depth_limit = 5,
     depth_limit_indicator = "",
     safe_output = true
 		},

@@ -45,27 +45,6 @@ return {
 	},
 
 	{
-		'jose-elias-alvarez/null-ls.nvim',
-		version = false,
-		lazy = "VeryLazy",
-		opts = function ()
-      return {
-        root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
-        sources = {
-          require("null-ls").builtins.formatting.fish_indent,
-          require("null-ls").builtins.diagnostics.fish,
-          require("null-ls").builtins.formatting.stylua,
-          require("null-ls").builtins.formatting.shfmt,
-          require("null-ls").builtins.diagnostics.flake8,
-        },
-      }
-    end,
-		config = function (_, opts)
-			require'null-ls'.setup(opts)
-		end,
-	},
-
-	{
 		'williamboman/mason.nvim',
 		lazy = true,
 		cmd = 'Mason',

@@ -21,9 +21,8 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	group = termGrp,
 })
 
-vim.cmd [[
-	augroup cat_compile
-		autocmd!
-		autocmd BufWritePost catppuccin.lua source <afile> | CatppuccinCompile
-	augroup end
-]]
+-- change to llvm
+vim.api.nvim_create_autocmd({'BufEnter'}, {
+	pattern = {'*.ll'},
+	command = "set filetype=llvm"
+})
