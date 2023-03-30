@@ -113,7 +113,18 @@ return {
 				{ 'mode', separator = { left = '', right = '' }, right_padding = 2 },
 			},
 			lualine_b = {'branch', 'diff', 'diagnostics'},
-			lualine_c = {},
+			lualine_c = {
+				{
+					function()
+						local navic = require('nvim-navic')
+						return navic.get_location()
+					end,
+					cond = function()
+						local navic = require('nvim-navic')
+						return navic.is_available()
+					end
+				},
+			},
 			lualine_x = {},
 			lualine_y = {{'encoding', color = {fg = colors.sky}}, {'filetype', color = {fg = colors.sky}}, 'progress'},
 			lualine_z = {'location'}
@@ -133,7 +144,6 @@ return {
 	},
 
 	config = function (_, opts)
-		local navic = require('nvim-navic')
 		-- Inserts a component in lualine_c at left section
 		local function ins_left(component)
 			table.insert(opts.sections.lualine_c, component)
@@ -141,10 +151,6 @@ return {
 		local function ins_right(component)
 			table.insert(opts.sections.lualine_x, component)
 		end
-
-		ins_left {
-			navic.get_location, cond = navic.is_available
-		}
 
 		ins_right {
 			-- Lsp server name .
