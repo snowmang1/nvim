@@ -25,6 +25,11 @@ return {
 					navic.attach(client, bufnr)
 				end
 			}
+			require'lspconfig'.pylsp.setup{
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end
+			}
 		end,
 	},
 
@@ -76,7 +81,7 @@ return {
 
 	{
     'williamboman/mason-lspconfig.nvim',
-		lazy = false,
+		lazy = false, -- bridge between mason and nvim-lspconfig
 		events = { 'BufReadPre', 'BufNewFile' },
 		dependancies = {
 			'williamboman/mason.nvim',
@@ -96,6 +101,22 @@ return {
 		cmd = 'Mason',
 		config = function (_, opts)
 			require'mason'.setup(opts)
+		end,
+	},
+
+	{
+		'jose-elias-alvarez/null-ls.nvim',
+		lazy = true,
+		ft = {'lua', 'fish', 'yaml', 'markdown'},
+		opts = function ()
+			local null_ls = require('null-ls')
+			return {
+				sources ={
+					null_ls.builtins.diagnostics.luacheck,
+					null_ls.builtins.diagnostics.fish,
+					null_ls.builtins.diagnostics.yamllint,
+				}
+			}
 		end,
 	}
 }
