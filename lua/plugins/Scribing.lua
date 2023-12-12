@@ -30,6 +30,9 @@ return {
 
 	{
 		'echasnovski/mini.comment',
+		keys = {
+			{"gcc", desc = "starts mini.comment"}
+		},
 		version = false,
 		event = 'BufEnter',
 		config = function (_, opts)
