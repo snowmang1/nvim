@@ -25,10 +25,19 @@ return {
 					navic.attach(client, bufnr)
 				end
 			}
-			require'lspconfig'.pylsp.setup{
+			require'lspconfig'.hls.setup{
 				on_attach = function(client, bufnr)
 					navic.attach(client, bufnr)
 				end
+			}
+			require'lspconfig'.texlab.setup{
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end
+			}
+			require'lspconfig'.grammarly.setup{
+				autostart = false,
+				filetypes = {'latex', 'tex', 'markdown'},
 			}
 		end,
 	},
@@ -87,7 +96,7 @@ return {
 			'williamboman/mason.nvim',
 		},
 		opts = {
-			ensure_installed = { "lua_ls", "rust_analyzer", "clangd"},
+			ensure_installed = { "hls", "lua_ls", "rust_analyzer", "clangd", "grammarly-languageserver"},
 			automatic_installation = true,
 		},
 		config = function (_, opts)
@@ -103,20 +112,4 @@ return {
 			require'mason'.setup(opts)
 		end,
 	},
-
-	{
-		'jose-elias-alvarez/null-ls.nvim',
-		lazy = true,
-		ft = {'lua', 'fish', 'yaml', 'markdown'},
-		opts = function ()
-			local null_ls = require('null-ls')
-			return {
-				sources ={
-					null_ls.builtins.diagnostics.luacheck,
-					null_ls.builtins.diagnostics.fish,
-					null_ls.builtins.diagnostics.yamllint,
-				}
-			}
-		end,
-	}
 }

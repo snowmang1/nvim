@@ -26,3 +26,8 @@ vim.api.nvim_create_autocmd({'BufEnter'}, {
 	pattern = {'*.ll'},
 	command = "set filetype=llvm"
 })
+
+vim.api.nvim_create_autocmd('BufEnter', {
+	pattern = {'*.tex'},
+	command = 'set spell'
+})
