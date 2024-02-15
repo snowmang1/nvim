@@ -26,6 +26,7 @@ return {
 				end
 			}
 			require'lspconfig'.hls.setup{
+				autostart = false,
 				on_attach = function(client, bufnr)
 					navic.attach(client, bufnr)
 				end
@@ -96,7 +97,7 @@ return {
 			'williamboman/mason.nvim',
 		},
 		opts = {
-			ensure_installed = { "hls", "lua_ls", "rust_analyzer", "clangd", "grammarly-languageserver"},
+			ensure_installed = { "hls", "lua_ls", "rust_analyzer", "clangd", "grammarly"},
 			automatic_installation = true,
 		},
 		config = function (_, opts)
