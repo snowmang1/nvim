@@ -2,10 +2,12 @@ return {
 	{
 		'nvim-treesitter/nvim-treesitter',
 		build = ':TSUpdate',
+		branch = 'main',
+		lazy = false,
 		opts = {
 			ensure_installed = { -- parsers that are alwasy installed
 				'c', 'lua', 'yaml', 'typescript', 'toml',
-				'help', 'rust', 'haskell'
+				'rust', 'haskell'
 			},
 			sync_install = false,
 			auto_install = true,
