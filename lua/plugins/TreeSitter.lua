@@ -33,12 +33,11 @@ return {
 				-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
 				-- Using this option may slow down your editor, and you may see some duplicate highlights.
 				-- Instead of true it can also be a list of languages
-				additional_vim_regex_highlighting = true,
+				additional_vim_regex_highlighting = false,
 			},
 		},
 		config = function (_, opts)
-			require'nvim-treesitter.configs'.setup(opts)
+			require'nvim-treesitter.config'.setup(opts)
 		end,
-	},
-	{ 'nvim-treesitter/nvim-treesitter-textobjects', lazy = true, },
+	}
 }
